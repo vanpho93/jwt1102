@@ -13,3 +13,18 @@ app.get('/', (req, res) => {
         res.send(result.rows);
     });
 });
+
+/*
+    +
+    *
+    /
+
+
+*/
+
+function add(a, b, cb) {
+    setTimeout(() => {
+        if (typeof a !== 'number' || typeof b !== 'number') return cb('Type error');
+        cb(undefined, a + b);
+    }, 2000);
+}
